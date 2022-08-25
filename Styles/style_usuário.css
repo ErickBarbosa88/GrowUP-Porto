@@ -1,0 +1,462 @@
+body {
+    background-color: #EEEDF5;
+    margin: 0%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/*cabeçalho*/
+header {
+    background-color: #050539;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+}
+
+.localização,
+.inicio {
+    padding-left: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    float: right;
+    padding-top: 22px;
+}
+
+#btnLogin {
+    float: right;
+    padding-left: 40px;
+    color: white;
+    background-color: #050539;
+    border: none;
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+
+
+/*início da página*/
+section {
+    margin-top: 0px;
+    padding-top: 30px;
+
+}
+
+#container {
+    height: 82.22px;
+    width: 75%;
+    background-color: #312E59;
+    border-radius: 10px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+    box-shadow: 0px 5px 5px rgba(48, 48, 48, 0.578);
+}
+
+h1 {
+    padding-left: 3%;
+    padding-top: 20px;
+    font-size: 36px;
+    font-weight: bold
+}
+
+
+
+/*botões de seleção*/
+#seleção {
+    margin-left: 10.5%;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.btnSelecionado {
+    background: #312E59;
+    color: #ffffff;
+    border-width: 1px;
+    border-color: #ffffff;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+    margin-right: 15px;
+}
+
+.btnNselecionado {
+    background: #DCDBE5;
+    color: #050539;
+    border-width: 0.3px;
+    border-color: rgb(222, 222, 222);
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    float: left;
+    margin-right: 15px;
+}
+
+.btnNselecionado:hover {
+    box-shadow: 0px 0px 10px rgba(83, 83, 83, 0.578);
+}
+
+#novoAgendamento{
+    width: 23%;
+}
+
+
+
+/*tabela de status*/
+#container2 {
+    height: auto;
+    width: 75%;
+    background-color: #DCDBE5;
+    border-radius: 8.39px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width: 100%;
+    font-size: large;
+    cursor: default;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr 0.5fr;
+    align-items: center;
+    height: 60px;
+
+}
+
+th {
+    color: #050539;
+    font-size: 18px;
+}
+
+td {
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    border-radius: 8.39px;
+    background-color: white;
+    padding: 13px;
+    color: #050539;
+}
+
+.exibirMais input {
+    display: none;
+}
+
+.exibirMais {
+    background-color: transparent;
+    width: 30px;
+    padding-top: 20px;
+}
+
+.data{
+    width: 70%;
+    margin-left: 30px;
+}
+.analise {
+    color: #2B22A0;
+}
+
+.pendente {
+    color: #C71313;
+    
+}
+
+.concluida {
+    color: #33b838;
+}
+
+.informes {
+    height: 150px;
+    border-radius: 8.39px;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: rgba(14, 13, 13, 0.884);
+    list-style: none;
+    font-size: 15px;
+    width: 1005px;
+}
+
+
+
+
+/*serviços de cada município*/
+#municípios {
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+    cursor: pointer;
+    background-color: #F8F8F8;
+}
+
+.registroCivil,
+.notas,
+.protesto,
+.hipotecas,
+.jurídicas {
+    padding-left: 50px;
+    padding-bottom: 25px;
+    font-size: 18px;
+    line-height: 30px
+}
+
+
+.listaFilha {
+    margin-top: 15px;
+    background-color: #F8F8F8;
+    width: 550px;
+    height: 110px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(48, 48, 48, 0.578);
+    padding-left: 25px;
+    padding-top: 15px;
+    color: #050539;
+    cursor: default;
+    line-height: 22px;
+    list-style: none;
+    font-size: 16px;
+}
+
+.BtIniciarAgen {
+    background-color: #312E59;
+    float: right;
+    margin-right: 10px;
+    width: 37%;
+    height: 25px;
+    text-align: center;
+    margin-top: 5px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.BtIniciarAgen:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.578);
+}
+
+span {
+    font-size: 17px;
+    color: #050539;
+    cursor: pointer;
+    line-height: 30px
+}
+
+span:hover {
+    color: #1206b8;
+}
+
+#título:hover {
+    color: #050539 !important;
+}
+
+.btnSelecionar{
+    width: 125.54px;
+    height: 35.2px;
+    background-color: #312E59;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btnNselecionar{
+    width: 125.54px;
+    height: 35.2px;
+    background-color: white;
+    color: #050539;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/*rodapé*/
+footer {
+    background-color: #050539;
+    width: 100%;
+    height: 10%;
+    margin-top: 50px;
+    bottom: 0;
+    /*position: absolute;*/
+}
+
+#elementosRodapé {
+    padding: 25px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+
+/* popup registrar */
+.popupContainer {
+    background-color: #312E59;
+    margin: 15% auto;
+    padding: 15px;
+    border-radius: 20px;
+    width: 45%;
+    height: 37%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'LexendDeca-Regular';
+    color: var(--title);
+
+    position: fixed;
+    margin-left: 390px;
+    margin-top: 230px;
+}
+
+
+.formRegistrar h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    margin-top: 35px;
+    margin-left: 10px;
+    font-size: 30px;
+    font: bold;
+}
+
+.formRegistrar h3 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    margin-top: 43px;
+    font-size: 25px;
+    font-weight: normal;
+
+}
+
+#closeModalRegistrar {
+    margin-right: -38px;
+    margin-top: -35px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    float: right;
+}
+
+.formRegistrar {
+    margin-left: 2em;
+    margin-right: 2rem;
+}
+
+.formRegistrarTitle {
+    position: relative;
+    margin-left: 290px;
+    padding-top: 15px;
+    float: right;
+}
+.popupRegistrar {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+/* popup sair do login */
+.form-popup {
+    position: fixed;
+    top: 10%;
+    right: 0px;
+    z-index: 9;
+}
+
+
+.form-container {
+    padding: 10px;
+    background-color: #050539;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.578);
+    height: 160px !important;
+    width: 180px !important;
+
+}
+
+.form-container .cancel {
+    background-color: #050539;
+    float: right;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+#fotologin {
+    color: white;
+    float: left;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+#nomeUsuário {
+    color: white;
+    padding-top: 10px;
+    height: 15px;
+    width: 100px;
+    float: left;
+    padding-left: 1px;
+
+}
+
+#sair {
+    color: white;
+    float: left !important;
+    padding-top: 30px;
+    padding-left: 3px;
+}
+
+#btnSair {
+    float: right;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+    padding-left: 15px;
+    font-size: 15PX;
+}

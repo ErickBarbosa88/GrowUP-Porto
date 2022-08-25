@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Styles/style_usuário.css" media="screen" />
+    <script src="Scripts/script_usuário.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="imagem/png" href="imagens/logo2.jpg" />
+    <title>Cartórios Francisco da Motta</title>
+</head>
+
+<body>
+
+    <!--cabeçalho-->
+    <header>
+        <button id="btnLogin" onclick="openForm()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                fill="currentColor" class="bi bi-person-circle" id="login" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg></button>
+        <a class="localização" href="index.html">LOCALIZAÇÃO</a>
+        <a class="inicio" href="index.html">INÍCIO</a>
+    </header>
+
+
+    <!--Corpo do texto-->
+    <section>
+
+        <div id="container">
+            <h1>Olá, Usuário!</h1>
+        </div>
+
+        <div id="seleção">
+            <button class="btnSelecionado" id="status">STATUS DE AGENDAMENTO</button>
+            <button class="btnNselecionado" id="novoAgendamento">INICIAR NOVO AGENDAMENTO</button>
+        </div>
+
+        <div id="container2">
+
+            <div id="tabela">
+
+                <table>
+                    <tr style="margin-top: -10px;">
+                        <th style="margin-left: 12px;">DATA DE ENVIO</th>
+                        <th>SERVIÇO</th>
+                        <th style="margin-left: -40px;"> STATUS</th>
+                    </tr>
+                    <br>
+
+
+                    <tr>
+                        <td class="data"> 23/04</td>
+                        <td class="nome">Registro de emancipações e interdições</td>
+                        <td class="analise">Em análise</td>
+                        <td class="exibirMais">
+                            <label>
+                                <input type="checkbox" id="exp_1" onclick="expandir()" />
+                                <span><img src="https://api.iconify.design/bi/play-circle-fill.svg?color=white"
+                                        alt="seta dentro de um  circulo"
+                                        style="height: 25px; width: auto; cursor: pointer;">
+                                </span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="informes" id="inf4" style="display: none;">
+                        <td>
+                            <div
+                                style="float:left ; margin-left: 3px; width: 220px; text-align: left; font-size: 18px; ">
+                                Enviar nova documentação (se necessário):
+                            </div><br>
+
+                            <input type="file" style="margin-top: 10px; margin-left: 0px; margin-bottom: 27px;"><br>
+
+                            <input type="checkbox" style="float: left;">
+                            <div style="font-size: 14px;">Salvar documentação para utilizar depois</div>
+
+                        </td>
+                        <td>
+                            <textarea name="descricao" id="descricao" cols="30" rows="10" disabled=""
+                                placeholder="Feedback recebido"
+                                style="background-color: #dcdbe570; cursor: no-drop; border-color:#bcbcbc; margin-left: 50px; border-radius: 5px; width: 400px; padding: 5px; height: 90px; margin-top: 12px;"></textarea>
+                        </td>
+                        <td>
+                            <strong style="font-size: 20px; margin-left:44px;"> Data marcada<br></strong>
+                            <input type="date" id="data" disabled=""
+                                style="margin-top: 10px; cursor: no-drop; border-radius: 7px;border-width: 1px; border-color: #bcbcbc; background-color: transparent; height: 30px; width: 120px; margin-left:45px;">
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="data"> 23/04</td>
+                        <td class="nome">Reconhecimento de paternidade</td>
+                        <td class="pendente">Pendente</td>
+                        <td class="exibirMais">
+                            <label>
+                                <input type="checkbox" id="exp_1" onclick="expandir()" />
+                                <span><img src="https://api.iconify.design/bi/play-circle-fill.svg?color=white"
+                                        alt="seta dentro de um  circulo"
+                                        style="height: 25px; width: auto; cursor: pointer;">
+                                </span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="informes" id="inf4" style="display: none;">
+                        <td>
+                            <div
+                                style="float:left ; margin-left: 3px; width: 220px; text-align: left; font-size: 18px; ">
+                                Enviar nova documentação (se necessário):
+                            </div><br>
+
+                            <input type="file" style="margin-top: 10px; margin-left: 0px; margin-bottom: 27px;"><br>
+
+                            <input type="checkbox" style="float: left;">
+                            <div style="font-size: 14px;">Salvar documentação para utilizar depois</div>
+
+                        </td>
+                        <td>
+                            <textarea name="descricao" id="descricao" cols="30" rows="10" disabled=""
+                                placeholder="Feedback recebido"
+                                style="background-color: #dcdbe570; cursor: no-drop; border-color:#bcbcbc; margin-left: 50px; border-radius: 5px; width: 400px; padding: 5px; height: 90px; margin-top: 12px;"></textarea>
+                        </td>
+                        <td>
+                            <strong style="font-size: 20px; margin-left:44px;"> Data marcada<br></strong>
+                            <input type="date" id="data" disabled=""
+                                style="margin-top: 10px; cursor: no-drop; border-radius: 7px;border-width: 1px; border-color: #bcbcbc; background-color: transparent; height: 30px; width: 120px; margin-left:45px;">
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="data"> 22/04</td>
+                        <td class="nome">Autenticação (cópia autenticada)</td>
+                        <td class="concluida">Concluída</td>
+                        <td class="exibirMais">
+                            <label>
+                                <input type="checkbox" id="exp_1" onclick="expandir()" />
+                                <span><img src="https://api.iconify.design/bi/play-circle-fill.svg?color=white"
+                                        alt="seta dentro de um  circulo"
+                                        style="height: 25px; width: auto; cursor: pointer;">
+                                </span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="informes" id="inf4" style="display: none;">
+                        <td>
+                            <div
+                                style="float:left ; margin-left: 3px; width: 220px; text-align: left; font-size: 18px; ">
+                                Enviar nova documentação (se necessário):
+                            </div><br>
+
+                            <input type="file" style="margin-top: 10px; margin-left: 0px; margin-bottom: 27px;"><br>
+
+                            <input type="checkbox" style="float: left;">
+                            <div style="font-size: 14px;">Salvar documentação para utilizar depois</div>
+
+                        </td>
+                        <td>
+                            <textarea name="descricao" id="descricao" cols="30" rows="10" disabled=""
+                                placeholder="Feedback recebido"
+                                style="background-color: #dcdbe570; cursor: no-drop; border-color:#bcbcbc; margin-left: 50px; border-radius: 5px; width: 400px; padding: 5px; height: 90px; margin-top: 12px;"></textarea>
+                        </td>
+                        <td>
+                            <strong style="font-size: 20px; margin-left:44px;"> Data marcada<br></strong>
+                            <input type="date" id="data" disabled=""
+                                style="margin-top: 10px; cursor: no-drop; border-radius: 7px;border-width: 1px; border-color: #bcbcbc; background-color: transparent; height: 30px; width: 120px; margin-left:45px;">
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="data"> 21/04</td>
+                        <td class="nome">Dissolução de Sociedade</td>
+                        <td class="concluida">Concluída</td>
+                        <td class="exibirMais">
+                            <label>
+                                <input type="checkbox" id="exp_1" onclick="expandir()" />
+                                <span><img src="https://api.iconify.design/bi/play-circle-fill.svg?color=white"
+                                        alt="seta dentro de um  circulo"
+                                        style="height: 25px; width: auto; cursor: pointer;">
+                                </span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="informes" id="inf4" style="display: none;">
+                        <td>
+                            <div
+                                style="float:left ; margin-left: 3px; width: 220px; text-align: left; font-size: 18px; ">
+                                Enviar nova documentação (se necessário):
+                            </div><br>
+
+                            <input type="file" style="margin-top: 10px; margin-left: 0px; margin-bottom: 27px;"><br>
+
+                            <input type="checkbox" style="float: left;">
+                            <div style="font-size: 14px;">Salvar documentação para utilizar depois</div>
+
+                        </td>
+                        <td>
+                            <textarea name="descricao" id="descricao" cols="30" rows="10" disabled=""
+                                placeholder="Feedback recebido"
+                                style="background-color: #dcdbe570; cursor: no-drop; border-color:#bcbcbc; margin-left: 50px; border-radius: 5px; width: 400px; padding: 5px; height: 90px; margin-top: 12px;"></textarea>
+                        </td>
+                        <td>
+                            <strong style="font-size: 20px; margin-left:44px;"> Data marcada<br></strong>
+                            <input type="date" id="data" disabled=""
+                                style="margin-top: 10px; cursor: no-drop; border-radius: 7px;border-width: 1px; border-color: #bcbcbc; background-color: transparent; height: 30px; width: 120px; margin-left:45px;">
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="data"> 18/04</td>
+                        <td class="nome">Declaração</td>
+                        <td class="analise">Em análise</td>
+                        <td class="exibirMais">
+                            <label>
+                                <input type="checkbox" id="exp_1" onclick="expandir()" />
+                                <span><img src="https://api.iconify.design/bi/play-circle-fill.svg?color=white"
+                                        alt="seta dentro de um  circulo"
+                                        style="height: 25px; width: auto; cursor: pointer;">
+                                </span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="informes" id="inf4" style="display: none;">
+                        <td>
+                            <div
+                                style="float:left ; margin-left: 3px; width: 220px; text-align: left; font-size: 18px; ">
+                                Enviar nova documentação (se necessário):
+                            </div><br>
+
+                            <input type="file" style="margin-top: 10px; margin-left: 0px; margin-bottom: 27px;"><br>
+
+                            <input type="checkbox" style="float: left;">
+                            <div style="font-size: 14px;">Salvar documentação para utilizar depois</div>
+
+                        </td>
+                        <td>
+                            <textarea name="descricao" id="descricao" cols="30" rows="10" disabled=""
+                                placeholder="Feedback recebido"
+                                style="background-color: #dcdbe570; cursor: no-drop; border-color:#bcbcbc; margin-left: 50px; border-radius: 5px; width: 400px; padding: 5px; height: 90px; margin-top: 12px;"></textarea>
+                        </td>
+                        <td>
+                            <strong style="font-size: 20px; margin-left:44px;"> Data marcada<br></strong>
+                            <input type="date" id="data" disabled=""
+                                style="margin-top: 10px; cursor: no-drop; border-radius: 7px;border-width: 1px; border-color: #bcbcbc; background-color: transparent; height: 30px; width: 120px; margin-left:45px;">
+                        </td>
+                    </tr>
+
+
+
+                </table>
+            </div>
+
+
+            <!--informações de cada município-->
+            <div class="agendamento">
+
+                <div id="título"
+                    style="font-size: 30px; margin-left: 30px; font-weight: bold; padding-top: 30px; color: #050539; cursor: default;">
+                    SELECIONE O MUNICÍPIO E O SERVIÇO DESEJADO</div>
+
+                <select id="municípios" onchange="mudarServiço(this.value)">
+                    <option value="pal">PALMEIRAS</option>
+                    <option value="caeté">CAETÉ AÇU</option>
+                    <option value="mucu">MUCUGÊ</option>
+                    <option value="ira">IRAQUARA</option>
+                </select><br>
+
+                <section>
+                    <div class="registroCivil">
+
+                        <span id="título" style="padding-left: 5px; font-weight: bold; cursor: default"> REGISTRO CIVIL
+                            DAS
+                            PESSOAS NATURAIS:
+                        </span><br>
+
+                        <span palmeiras id="AtosAcessórios"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                height="12" fill="currentColor" style="padding-right: 8px;" class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Atos acessórios relativos a todos os serviços citados abaixo: averbações de
+                            separações,
+                            divórcios, óbitos e casamentos
+
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório"> Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr</div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Buscas de registros
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Processos de registro tardio e restauração de primeiro registro de
+                            nascimento
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Reconhecimento de paternidade
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Registro de casamento
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Registro de emancipações e interdições
+
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Registro de nascimento. (Certidão comum ou de inteiro teor)
+
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Registro de óbitos. (Certidão comum ou de inteiro teor)
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                    </div>
+
+                    <div class="jurídicas">
+                        <span id="título" style="padding-left: 5px; font-weight: bold; cursor: default">TÍTULOS E
+                            DOCUMENTOS
+                            CIVIS DAS PESSOAS JURÍDICAS:
+                        </span><br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Atos administrativos judiciais
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Busca de Títulos e Documentos de Pessoa Jurídica
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Busca de Títulos e Documentos
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Títulos e Documentos de Atos Constitutivos
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Títulos e Documentos em Inteiro Teor
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Títulos e Documentos Resumida
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão Negativa de Regimento Interno de Condomínio
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Conservação de documentos e Registro de contratos em geral
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Registrar alterações contratuais, estatutárias, atas, balanços, livros contábeis
+                            ou de atas
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Registro de fundação, estatuto, atas e dissolução de sociedades civis, religiosas,
+                            científicas,
+                            políticas, de notícias
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Registro de sociedade civil
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                    </div>
+
+                    <div class="notas">
+                        <span id="título" style="padding-left: 5px; font-weight: bold; cursor: default">TABELIONATO DE
+                            NOTAS:
+                        </span><br>
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Abertura de ficha de Assinatura (abrir firma)
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Atas notariais para de Usucapião
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Atas notariais para fins diversos
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Autenticação (cópia autenticada)
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de atos registrados no próprio Cartório
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Compra e Venda
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Declaração
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Dissolução de Sociedade
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Doação
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Emancipação
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Inventário e Partilha
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Pacto Antenupcial
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Procuração Pública para todos os fins
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Reconhecimento de assinatura (reconhecer firma aberta)
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Reconhecimento de Paternidade
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Reconhecimento de sinal público
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Separação ou Divórcio
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Testamentos cerrados ou públicos
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                        <span palmeiras><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>União Estável
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a> <br>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                        </ul>
+                        <br>
+
+                    </div>
+
+                    <div class="protesto">
+                        <span id="título" style="padding-left: 5px; font-weight: bold; cursor: default">PROTESTO DE
+                            TÍTULOS:
+                        </span><br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Cancelamento de Título Protestado
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Lavrar e registrar o protesto ou acatar a desistência do credor
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Prestar informações e fornecer certidões relativas a todos os atos
+                            praticados
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Proceder às averbações
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Protesto de contrato de locação de veículo
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Protesto de contratos de compromisso ou promessa de compra e venda, promessa de
+                            cessão ou cessão
+                            de direitos
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Protesto de letra de câmbio, nota promissória, duplicata, debênture ou
+                            cheque
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Protesto do documento particular que origine uma dívida
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Receber pagamento de títulos e outros documentos de dívida
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                    </div>
+
+                    <div class="hipotecas">
+                        <span id="título" style="padding-left: 5px; font-weight: bold; cursor: default">REGISTRO DE
+                            IMÓVEIS E
+                            HIPOTECAS:
+                        </span><br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Averbações
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Benfeitorias
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Ações Reais e Pessoais Reipersecutórias
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Inteiro Teor do Imóvel
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Ônus Reais mais Ações Reais e Pessoais Reipersecutórias
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Ônus Reais
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Transcrição de Imóvel mais Ônus Reais
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão de Transcrição de Imóvel
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão Dominial
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão em Inteiro Teor do Imóvel mais Ônus Reais
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão em Inteiro Teor do Imóvel
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão Negativa de Bens do Casal ou Sócios
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão Negativa de Bens do casal
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão Negativa de Bens
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidão Trintenária
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Certidões de atos registrados
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Doação
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Hipotecas
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Matrícula de Imóvel Atualizada mais Certidão de Ônus Reais e Ações
+                            Reipersecutórias
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Matrícula de Imóvel Atualizada mais Ônus Reais e Ações Reipersecutórias
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Matrícula de Imóvel Atualizada mais Ônus Reais
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Matrícula de Imóvel Atualizada
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Matrícula do imóvel
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Penhoras
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Permutas
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Usucapião
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                        <span palmeiras> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                fill="currentColor" style="padding-right: 8px; " class="bi bi-chevron-right"
+                                class="seta" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>Usufruto
+                        </span>
+                        <ul class="lista" style="display: none;">
+                            <li class="listaFilha">
+                                Documentação necessária: <a href="imagens/Documentação.pdf"
+                                    style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                    o arquivo </a>
+                                <div class="localizaçãoCartório">Localização do cartório: Praça Dr. José Gonçalves,
+                                    n° 11, centro </div>
+                                <div class="horário">Horário de funcionamento: 08 às 14hr </div>
+                                <button class="BtIniciarAgen" onclick="escolhido()">INICIAR AGENDAMENTO</button>
+                            </li>
+                        </ul>
+                        <br>
+
+                    </div>
+
+
+                    <ul id="listaPalmeiras" style="display: none; margin-top: -40px;">
+                        <li class="listaFilha">
+                            Documentação necessária: <a href="imagens/Documentação.pdf"
+                                style="color: #050539; text-decoration: underline;" download> Clique para baixar
+                                o arquivo </a> <br>
+                            <div class="localizaçãoCartório"> Localização do cartório: Praça Dr. José Gonçalves,
+                                n° 11, centro </div>
+                            <div class="horário">Horário de funcionamento: 08 às 14hr</div>
+                            <button class="BtIniciarAgen" style="opacity: 0.2; cursor: default;">INICIAR
+                                AGENDAMENTO</button>
+                        </li>
+                        <div id="título"
+                            style="font-size: 22px; margin-left: -10px; font-weight: bold; padding-top: 30px; color: #050539; cursor: default;">
+                            SELECIONE A DOCUMENTAÇÃO DESEJADA</div><br><br>
+                        <button class="btnNselecionar" onclick="alterar(this)">CPF</button> <button
+                            class="btnSelecionar">CERTIDÃO</button> <button class="btnSelecionar">RG</button> <input
+                            type="file"><br><br><br>
+                        <input type="checkbox" style="float: left; height: 16px; width: 16px; margin-right: 10px;">
+                        <div style="font-size: 18px;">Salvar documentação para utilizar depois</div>
+                        <button class="btnSelecionar" style="margin-left: 950px; margin-bottom: -30px;" onclick="openFormSair()">ENVIAR</button>
+                    </ul>
+
+                </section>
+
+            </div>
+            <br>
+        </div>
+
+    </section>
+    <br>
+
+
+    <!--Rodapé-->
+    <footer>
+        <div id="elementosRodapé">
+            Cartórios Francisco da Motta | Agradecemos sua visita
+        </div>
+    </footer>
+
+
+    <!--popup sair do login-->
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+
+            <button type="button" class="btn cancel" onclick="closeFormSair()"> <svg xmlns="http://www.w3.org/2000/svg"
+                    width="18" height="18" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" id="fotologin"
+                viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+            <h2 id="nomeUsuário">JOÃO</h2>
+
+            <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor"
+                    class="bi bi-box-arrow-in-right" id="sair" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+                    <path fill-rule="evenodd"
+                        d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                </svg> </a> <button id="btnSair">
+                <h2> SAIR</h2>
+            </button>
+        </form>
+    </div>
+
+
+    <!--popup outra forma de login do usuário-->
+    <div class="popupRegistrar" id="Sair">
+        <div class="popupContainer">
+            <form class="formRegistrar" method="get" action="">
+
+
+                <button id="closeModalRegistrar" onclick="closeForm()"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        style="color: white;" class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <path
+                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+
+                <strong>
+                    <h2>FORMULÁRIO ENVIADO COM SUCESSO</h2>
+                </strong>
+                <h3>Toda a documentação original deverá ser levada presencialmente</h3>
+                <h3 style="font-size: 18px; padding-top: 26px;">Acompanhe o status do agendamento a partir do seu perfil</h3>
+
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
