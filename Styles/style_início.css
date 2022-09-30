@@ -300,7 +300,7 @@ footer {
 .form-container {
     max-width: 300px;
     padding: 10px;
-    background-color: #050539;
+    background-color: #312E59;
     text-align: center;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -338,11 +338,12 @@ footer {
 }
 
 #btnEntrar {
-    margin-left: 180px;
+    position: relative;
+    background-color: #4e4992;
 }
 
 .form-container .cancel {
-    background-color: #050539;
+    background-color: transparent;
     float: right;
 }
 
@@ -416,8 +417,9 @@ footer {
 }
 
 #closeModalRegistrar {
-    margin-right: -20px;
-    margin-top: -35px;
+    position: relative;
+    margin-top: -10px;
+    margin-right: 5px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -435,6 +437,9 @@ footer {
     padding-top: 15px;
     float: right;
 }
+#btnRegistrar{
+    text-align: center;
+}
 
 #btnRegistrar a {
     color: white;
@@ -448,14 +453,16 @@ footer {
     padding: 16px 20px;
     border: none;
     cursor: pointer;
-    width: auto;
+    max-width: min-content;
     margin-bottom: 10px;
     opacity: 0.8;
     border-radius: 5px;
-    margin-right: 10px;
     font-size: 16px;
+    margin: 15px;
 }
-
+#btnRegistrar #cadastrar{
+    background-color: #48448a;
+}
 #btnRegistrar button:hover {
     opacity: 1;
 }
@@ -463,20 +470,17 @@ footer {
 #cpf, #senha {
     display: block;
     margin-bottom: 20px;
-    width: 480px;
+    width: 100%;
     height: 50px;
     border-radius: 5px;
     background-color: #C6C5CD;
-    padding-left: 20px;
     border: none;
 }
 
 #inputRegistrar {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-
 }
 
 .popupRegistrar {
@@ -521,6 +525,7 @@ h3 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     color: #ddd;
+    padding: 3px;
 
 }
 .formCadastrar {
