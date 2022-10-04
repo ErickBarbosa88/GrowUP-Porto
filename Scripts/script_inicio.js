@@ -194,7 +194,15 @@ function openFormCadastrar() {
 function closeFormCadastrar() {
     document.getElementById("popupRegistrar").style.display = "none";
 }
+function continuarFormCadastro(){
+    if (document.getElementById("checarAdm").checked){
+        alert("hello")
+    }else{
 
+    }
+
+
+}
 
 
 /*popup login simples */

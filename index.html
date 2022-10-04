@@ -20,7 +20,7 @@
 
 
     <!--cabeçalho-->
-    <header>
+    <header style="margin-top: 0;">
         <button id="btnLogin" onclick="openFormSimples()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                 fill="currentColor" class="bi bi-person-circle" id="login" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -1469,7 +1469,7 @@
 
     <!--popup cadastro do usuário-->
     <div class="popupCadastrar" id="popupCadastrar">
-        <div class="popupContainer" style="margin-top: 90px;">
+        <div class="popupContainer" style="margin-top: 70px;">
             <form class="formCadastrar" method="get" action="">
 
                 <div class="formCadastrarTitle">
@@ -1484,31 +1484,32 @@
                 </div>
 
                 <strong>
-                    <h2 class="popup-title">CADASTRO</h2>
+                    <h2 class="popup-title">Cadastre-se</h2>
                 </strong>
-                <h3>Realize seu cadastro para prosseguir com o agendamento</h3>
 
                 <div id="inputCadastrar">
 
-                    <input id="nomeCompletoCad" class="inputCad" type="text" placeholder="Nome completo">
+                    <input id="nomeCompletoCad" class="inputCad" type="text" placeholder="Nome completo" style="width: 100%!important;">
 
                     <div class="inputContainer">
                         <input id="emailCad" class="inputCad" type="email" placeholder="Email">
-                        <input id="cpfCad" class="inputCad" type="text" placeholder="CPF">
+                        <input id="telefoneCad" class="inputCad" type="tel" placeholder="Telefone">
                     </div>
 
-                    <input id="telefoneCad" class="inputCad" type="tel" placeholder="Telefone">
+                    <input id="cpfCad" class="inputCad" type="text" placeholder="CPF">
+                    <span class="containerADMCheck"><input type="checkbox" id="checarAdm" name="checarAdm">
+                    <label for="checarAdm" style="color: rgb(255, 255, 255);">Sou Administrador</label></span>
 
+                   
                     <div class="inputContainer">
                         <input id="senhaCad" class="inputCad" type="password" placeholder="Senha">
                         <input id="senhaConfirmCad" class="inputCad" type="password" placeholder="Confirmar senha">
-
                     </div>
 
                 </div>
 
                 <div id="btnRegistrar" class="btn">
-                    <button> <a href="index_usuário.html">REALIZAR CADASTRO</a> </button>
+                    <button onclick="continuarFormCadastro()">Continuar</button>
 
                 </div>
 
